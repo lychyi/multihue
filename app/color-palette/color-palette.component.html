@@ -1,0 +1,5 @@
+<div class="palette">
+  <div *ngFor="let name of paletteNames">
+    <div *ngFor="let chroma of palette[name]" class="color" [ngClass]="{'selected': selectedColor == chroma.hex()}" [ngStyle]="{'background-color': chroma.hex()}" (click)="setAsSelected(chroma)"></div>
+  </div>
+</div>
