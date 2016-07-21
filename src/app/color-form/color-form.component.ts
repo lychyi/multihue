@@ -43,7 +43,7 @@ export class ColorFormComponent implements OnInit, OnChanges {
 
   isValidHex(hex) {
     var regexp= new RegExp('^#(?:[0-9a-f]{3}){1,2}$');
-    return regexp.test(hex);
+    return regexp.test(hex.toLowerCase());
   }
 
   ngOnInit() {
