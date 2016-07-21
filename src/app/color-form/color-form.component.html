@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Multi-Hued Color Scheme Generator</h2>
+  <hr>
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="color1">Color 1</label>
+      <input [(ngModel)]="color1" (ngModelChange)="onColorFormChange($event)" name="color1hex" type="text" class="form-control" required>
+      <app-color-palette [(selectedColor)]="color1" (selectedColorChange)="onColorFormChange($event)"></app-color-palette>
+    </div>&ensp;&ensp;
+    <div class="form-group">
+      <label for="color2">Color 2</label>
+      <input [(ngModel)]="color2" (ngModelChange)="onColorFormChange($event)" name="color2hex" type="text" class="form-control" required>
+      <app-color-palette [(selectedColor)]="color2" (selectedColorChange)="onColorFormChange($event)"></app-color-palette>
+    </div>&ensp;&ensp;
+    <div class="form-group">
+      <label for="color3">Color 3</label>
+      <input [(ngModel)]="color3" (ngModelChange)="onColorFormChange($event)" name="color3hex" type="text" class="form-control" required>
+      <app-color-palette [(selectedColor)]="color3" (selectedColorChange)="onColorFormChange($event)"></app-color-palette>
+    </div>&ensp;&ensp;
+    <div class="form-group" style="vertical-align: top;">
+      <label for="numColors">Number of Colors</label>
+      <select name="numColors" id="numColors" class="form-control" [(ngModel)]="numColors" (ngModelChange)="onColorFormChange($event)">
+        <option *ngFor="let n of numColorChoices" [value]="n">{{n}}</option>
+      </select>
+    </div>
+  </form>
+</div>
+<app-color-scheme [scheme]="scheme"></app-color-scheme>

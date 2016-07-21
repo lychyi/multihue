@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5, h6 {
+    color: #454545;
+    font-family: 'Playfair Display', serif;
+}
+
+.ng-invalid {
+    border-left: 5px solid #a94442;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+}

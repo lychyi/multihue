@@ -4,3 +4,7 @@
 
 /// <reference path="../typings/browser.d.ts" />
 declare var module: { id: string };
+declare module 'chroma' {
+    var chroma: any;
+    export = chroma;
+}

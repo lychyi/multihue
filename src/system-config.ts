@@ -7,10 +7,24 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'moment': 'vendor/moment/moment.js', 
+  'ng2-bootstrap': 'vendor/ng2-bootstrap', 
+  'chroma': 'vendor/chroma-js'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'moment': {
+    format: 'cjs'
+  }, 
+  'ng2-bootstrap': {
+    'defaultExtensions': 'js'
+  },
+  'chroma': {
+    defaultExtensions: 'js', 
+    main: 'chroma.min.js', 
+    format: 'cjs' 
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -34,6 +48,9 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/color-form',
+  'app/color-scheme',
+  'app/color-palette',
   /** @cli-barrel */
 ];
 

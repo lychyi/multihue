@@ -1,0 +1,5 @@
+<div class="color-scheme">
+    <div *ngFor="let chroma of scheme" class="color-block" [ngStyle]="{'background-color': chroma.hex(), 'color': chroma.luminance() > 0.29 ? darkText : lightText}">
+        {{chroma.hex()}}
+    </div>
+</div>
